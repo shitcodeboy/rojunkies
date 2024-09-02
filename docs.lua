@@ -7,5 +7,3 @@ local window = uilib:init({
     --gamename = "counter blox" <-- if no gamename, then game.Name
     watermark = true
 })
-
-wait(5)window:Destory()

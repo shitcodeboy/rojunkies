@@ -45,7 +45,7 @@ function lib:init(tb)
 		watermark["1"]["AutomaticSize"] = Enum.AutomaticSize.X
 		watermark["1"]["Size"] = UDim2.new(0, 0, 0, 24)
 		-- watermark["1"]["Position"] = UDim2.new(0, 1351, 0, 8)
-        watermark["1"]["Position"] = UDim2.new(1, -8, 0, 8)
+        watermark["1"]["Position"] = UDim2.new(1, -42, 0, 8)
 		watermark["1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 		watermark["1"]["Name"] = [[watermark]]
 
@@ -81,7 +81,7 @@ function lib:init(tb)
 
 		local gui = watermark["1"]
 
-		function updateWatermark(fps)
+		function updateWatermark(a)
 			local text = [[<font color="#c1a3a3">rojunkies</font>]]
 			if watermark.params.user then
 				text = text .. string.format([[ | <font color="#828282">user:</font> <font color="#c1a3a3">%s</font>]], user)
@@ -90,10 +90,10 @@ function lib:init(tb)
 				text = text .. [[ | <font color="#828282">version:</font> <font color="#c1a3a3">]] .. ver .. [[</font>]]
 			end
 			if watermark.params.fps then
-				text = text .. string.format([[ | <font color="#828282">fps:</font> <font color="#c1a3a3">999</font>]], fps)
+				text = text .. string.format([[ | <font color="#828282">fps:</font> <font color="#c1a3a3">999</font>]], a)
 			end
 			if watermark.params.ping then
-				text = text .. string.format([[ | <font color="#828282">ping:</font> <font color="#c1a3a3">%s</font>]], game.Stats.PerformanceStats.Ping:GetValue())
+				text = text .. string.format([[ | <font color="#828282">ping:</font> <font color="#c1a3a3">%s</font>]], math.floor(game.Stats.PerformanceStats.Ping:GetValue()))
 			end
 			if watermark.params.gamename then
 				text = text .. string.format([[ | <font color="#828282">game:</font> <font color="#c1a3a3">%s</font>]], gamename)

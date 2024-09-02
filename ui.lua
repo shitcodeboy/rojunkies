@@ -44,7 +44,8 @@ function lib:init(tb)
 		watermark["1"]["AnchorPoint"] = Vector2.new(1, 0)
 		watermark["1"]["AutomaticSize"] = Enum.AutomaticSize.X
 		watermark["1"]["Size"] = UDim2.new(0, 0, 0, 24)
-		watermark["1"]["Position"] = UDim2.new(0, 1351, 0, 8)
+		-- watermark["1"]["Position"] = UDim2.new(0, 1351, 0, 8)
+        watermark["1"]["Position"] = UDim2.new(1, -8, 0, 8)
 		watermark["1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 		watermark["1"]["Name"] = [[watermark]]
 
